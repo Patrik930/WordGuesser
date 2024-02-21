@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+
+    <style>
+        .letters{
+            border: solid 1px black;
+            background-color: red;
+            color: white;
+            margin-left: 5px;
+            font-size:5rem;
+            margin-top: 300px;
+        }
+        .abc{
+            display: flex;
+            justify-content: center;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+        }
+        .button{
+            display: flex;
+            justify-content: center;
+        }
+        .box{
+            border-radius: 5px;
+            background-color: blue;
+            color: white;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .word{
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Találd ki a szót!</h1>
+    <div class="button">
+        <button type="button">Start</button>
+    </div>
+    
+    <div class="word">
+        
+    </div>
+
+    <div class="abc "></div>
+  
+
+    <script>
+
+        const str='uefueiwfbuiewbfuiewbfuiwebfuiewbfuiewbfuiewbfeuiwbfewuifgbewuigelferuiergheruiogheriogheriogerhgioergo'
+        console.log(Array.from(str))
+        console.log(str[3],str.split(''))
+
+        const diak = {
+            nev:'Gyula',
+            kor: 20
+        }
+        //let nev = diak.nev 
+        //let ev = diak.ev
+        //destrukturáló szintaxis:
+        let {nev,kor} = diak;
+        console.log(nev,kor)
+        const arr=[1212,25888]
+        //let nr1= arr[0]
+        //let nr2= arr[1]
+        let [nr1,nr2] = arr
+        console.log(nr1,nr2);
+
+        //let selectedLetter = domObj.textContent
+       // let cardNodeList = document.querySelectorAll('.card')
+        /*cardNodeList.forEach((item,index)=>{
+            if(str[index]==selectedLetter) item.textContent=selectedLetter
+        })*/
+
+        //reszponzitvitás:
+        console.log(window.innerHeight)
+
+        //document.body.style.setProperty('--cellSize','30px')
+
+        abc.split("").forEach((element)=>{
+            document.querySelector('.abc').innerHTML += `
+            <div class="letters">${element}</div>
+            `
+        })
+        function start(){
+            let randWord = Math.floor(Math.random() * words.length);
+            let szo=Array.from(words[randWord])
+            szo.forEach((element)=>{
+            document.querySelector('.word').innerHTML += `<div class="box">${element}</div>`
+        })
+        }
+        
+
+
+
+
+
+    </script>
+</body>
+</html>
